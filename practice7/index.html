@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework 5</title>
+</head>
+
+<body>
+    <p class="dropdown">Привет :)</p>
+    <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown button
+        </button>
+        <div class="menu dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+    </div>
+    <script>
+        "use strict";
+
+        //task1
+        const el = document.querySelectorAll(".dropdown-item");
+        el.forEach(element => {
+            element.classList.add("super-dropdown");
+        });
+
+        //task2
+        const btn = document.querySelector(".btn");
+        if (btn.classList.contains("btn-secondary")) {
+            btn.classList.remove("btn-secondary");
+        } else {
+            btn.classList.add("btn-secondary");
+        }
+
+        //task3
+        const el1 = document.querySelector("div.dropdown");
+        el1.classList.remove("dropdown-menu");
+
+        //task4
+        const div = document.querySelector("div.dropdown");
+        div.insertAdjacentHTML("afterend", '<a href="#">link</a>');
+
+        //task5
+        const elId = document.querySelector("#dropdownMenuButton");
+        elId.setAttribute("id", "superDropdown");
+
+        //task6
+        const elAttribute = document.querySelector('[aria-labelledby="dropdownMenuButton"]');
+        elAttribute.setAttribute("data-dd", "3");
+
+        //task7
+        const elAtt = document.querySelector(".dropdown-toggle");
+        elAtt.removeAttribute("type");
+    </script>
+</body>
